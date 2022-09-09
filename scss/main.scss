@@ -1,0 +1,87 @@
+// body {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     height: 47em;
+
+//     form {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 20px 20px;
+//         height: 75%;
+//         justify-content: space-evenly;
+//         background-color: lightpink;
+
+//         input[name=input] {
+//             font-size: 36px;
+//             line-height: 2em;
+//             padding: 10px;
+//             margin: 10px 0;
+//             outline: none;
+//         }
+
+//         input[type=button] {
+//             height: 25px;
+//             width: 25px;
+//             padding: 30px;
+//             margin: 10px;
+//             border-radius: 50%;
+//             outline: none;
+//             border: none;
+//         }
+
+
+//     }
+// }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111;
+}
+
+form {
+    // height: 47em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .calc-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 5px;
+
+        input {
+            font-size: 26px;
+            padding: 10px;
+            grid-column: 1/5;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 2em;
+            height: 2em;
+            font-size: 30px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background-color: plum;
+        }
+
+        .zero {
+            grid-column: 1/4;
+            // width: 9.9em;
+            border-radius: 35px;
+        }
+    }
+}
