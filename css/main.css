@@ -1,41 +1,62 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #111;
+.row1 button,
+.row2 button,
+.row3 button,
+.row4 button,
+.row5 button {
+  width: 2em;
+  height: 2em;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  background: inherit;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.row1 button:hover,
+.row2 button:hover,
+.row3 button:hover,
+.row4 button:hover,
+.row5 button:hover {
+  background-color: #6441a5;
 }
 
-form {
-  width: 100%;
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111;
+  height: 45em;
 }
-form .calc-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 5px;
-}
-form .calc-container input {
-  font-size: 26px;
-  padding: 10px;
-  grid-column: 1/5;
-  outline: none;
-  border: none;
+body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #6441a5;
   border-radius: 10px;
+  outline: none;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 20em;
+  height: 30em;
 }
-form .calc-container button {
-  width: 2em;
-  height: 2em;
-  font-size: 30px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  background-color: plum;
+body form input {
+  border: 1px solid #6441a5;
+  border-radius: 10px;
+  outline: none;
+  font-size: 28px;
+  width: calc(100% - 60px);
+  height: 3em;
+  padding: 0 10px;
+  background-color: inherit;
+  color: #fff;
+  transition: 0.3s;
 }
-form .calc-container .zero {
-  grid-column: 1/4;
-  border-radius: 35px;
+body form input:hover {
+  background-color: #6441a5;
 }/*# sourceMappingURL=main.css.map */

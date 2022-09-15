@@ -1,87 +1,66 @@
-// body {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     height: 47em;
+.row1 button,
+.row2 button,
+.row3 button,
+.row4 button,
+.row5 button {
+    width: 2em;
+    height: 2em;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    background: inherit;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
 
-//     form {
-//         display: flex;
-//         flex-direction: column;
-//         padding: 20px 20px;
-//         height: 75%;
-//         justify-content: space-evenly;
-//         background-color: lightpink;
-
-//         input[name=input] {
-//             font-size: 36px;
-//             line-height: 2em;
-//             padding: 10px;
-//             margin: 10px 0;
-//             outline: none;
-//         }
-
-//         input[type=button] {
-//             height: 25px;
-//             width: 25px;
-//             padding: 30px;
-//             margin: 10px;
-//             border-radius: 50%;
-//             outline: none;
-//             border: none;
-//         }
-
-
-//     }
-// }
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #111;
+    &:hover {
+        background-color: #6441a5;
+    }
 }
 
-form {
-    // height: 47em;
-    width: 100%;
+
+@mixin flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    .calc-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 5px;
+@mixin border {
+    border: 1px solid #6441a5;
+    border-radius: 10px;
+    outline: none;
+}
+
+body {
+    @include flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111;
+    height: 45em;
+
+    form {
+        @include flex;
+        @include border;
+        text-align: center;
+        justify-content: space-evenly;
+        width: 20em;
+        height: 30em;
 
         input {
-            font-size: 26px;
-            padding: 10px;
-            grid-column: 1/5;
-            outline: none;
-            border: none;
-            border-radius: 10px;
-        }
+            @include border;
+            font-size: 28px;
+            width: calc(100% - 60px);
+            height: 3em;
+            padding: 0 10px;
+            background-color: inherit;
+            color: #fff;
+            transition: .3s;
 
-        button {
-            width: 2em;
-            height: 2em;
-            font-size: 30px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            background-color: plum;
-        }
-
-        .zero {
-            grid-column: 1/4;
-            // width: 9.9em;
-            border-radius: 35px;
+            &:hover {
+                background-color: #6441a5;
+            }
         }
     }
 }
